@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Muhammed Farras AK – Student portfolio showcasing creativity, videography, and personal growth.">
+  <title>Muhammed Farras – Personal Portfolio</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Lora&family=Montserrat:wght@400;600&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --bg-color: #2E1A47;
+      --card-bg: #3A235D;
+      --footer-bg: #1c102e;
+      --heading-color: #D4AF37;
+      --text-color: #f2f2f2;
+      --font-heading: 'Montserrat', sans-serif;
+      --font-body: 'Lora', serif;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: var(--bg-color);
+      font-family: var(--font-body);
+      color: var(--text-color);
+      line-height: 1.7;
+      scroll-behavior: smooth;
+    }
+
+    /* Nav Bar */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      backdrop-filter: blur(12px);
+      background: rgba(42, 26, 66, 0.8);
+      padding: 15px 0;
+      text-align: center;
+      z-index: 1000;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+      transition: opacity 0.4s ease; /* smooth vanish effect */
+    }
+
+    nav a {
+      font-family: var(--font-heading);
+      color: var(--heading-color);
+      text-decoration: none;
+      margin: 0 20px;
+      font-size: 17px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      padding: 6px 10px;
+      border-radius: 6px;
+    }
+
+    nav a.active,
+    nav a:hover {
+      background: var(--heading-color);
+      color: var(--bg-color);
+    }
+
+    header {
+      text-align: center;
+      padding: 140px 20px 40px;
+    }
+
+    header .profile-img {
+      width: 180px;
+      height: 180px;
+      border-radius: 12px;
+      object-fit: cover;
+      border: 4px solid var(--heading-color);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+      margin-bottom: 20px;
+      transition: transform 0.3s ease;
+    }
+
+    header .profile-img:hover {
+      transform: scale(1.03);
+    }
+
+    header h1 {
+      font-family: var(--font-heading);
+      font-size: 36px;
+      color: var(--heading-color);
+      margin-top: 10px;
+    }
+
+    header h3 {
+      font-family: var(--font-heading);
+      font-size: 18px;
+      font-weight: 400;
+      color: #ccc;
+      margin-top: 5px;
+      letter-spacing: 2px;
+    }
+
+    main {
+      display: flex;
+      justify-content: center;
+      padding: 40px 20px;
+    }
+
+    .content {
+      max-width: 900px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+
+    .card {
+      background-color: var(--card-bg);
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+      opacity: 0;
+      transform: translateY(40px);
+      transition: all 0.8s ease;
+    }
+
+    .card.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    h2 {
+      font-family: var(--font-heading);
+      font-size: 24px;
+      color: var(--heading-color);
+      margin-bottom: 15px;
+      border-bottom: 1px solid #ffffff33;
+      padding-bottom: 6px;
+      text-align: center;
+    }
+
+    p {
+      font-size: 18px;
+      margin-bottom: 12px;
+    }
+
+    ul {
+      padding-left: 20px;
+      font-size: 18px;
+    }
+
+    ul li {
+      margin-bottom: 8px;
+    }
+
+    a {
+      color: var(--heading-color);
+      text-decoration: none;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: var(--footer-bg);
+      color: #aaa;
+      font-size: 14px;
+    }
+
+    @media (max-width: 600px) {
+      nav a {
+        display: inline-block;
+        margin: 6px;
+        font-size: 15px;
+      }
+
+      header .profile-img {
+        width: 140px;
+        height: 140px;
+      }
+
+      header h1 {
+        font-size: 28px;
+      }
+
+      header h3 {
+        font-size: 16px;
+      }
+
+      h2 {
+        font-size: 20px;
+      }
+
+      .card {
+        padding: 20px;
+      }
+
+      p, ul {
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navigation Tabs -->
+  <nav id="navbar">
+    <a href="#about">About Me</a>
+    <a href="#hobbies">Hobbies</a>
+    <a href="#interests">Interests</a>
+    <a href="#goals">Goals</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <header>
+    <img src="WhatsApp Image 2025-09-07 at 20.35.51_4684517b.jpg" alt="Muhammed Farras Profile Photo" class="profile-img">
+    <h1>Muhammed Farras A.K</h1>
+    <h3>Student</h3>
+  </header>
+
+  <main>
+    <div class="content">
+
+      <section class="card" id="about">
+        <h2>About Me</h2>
+        <p>
+          I'm Muhammed Farras A.K, a 16-year-old computer science student with a passion for technology and creativity.
+          I enjoy capturing life’s moments through photography and videography. Recently, my friend and I started a small wedding videography business, turning our passion into a startup.
+        </p>
+        <p>
+          I used to be a quiet kid who rarely went outside until 10th standard. But after joining higher secondary, I started exploring the world beyond my neighbourhood. This helped me grow, gain confidence, and discover new interests.
+        </p>
+      </section>
+
+      <section class="card" id="hobbies">
+        <h2>Hobbies</h2>
+        <ul>
+          <li>Video editing</li>
+          <li>Listening to music</li>
+          <li>Gaming</li>
+        </ul>
+      </section>
+
+      <section class="card" id="interests">
+        <h2>Interests</h2>
+        <ul>
+          <li>Exploring new food spots and trying different cuisines</li>
+          <li>Improving my editing and creative storytelling skills</li>
+          <li>Trekking and exploring nature</li>
+        </ul>
+      </section>
+
+      <section class="card" id="goals">
+        <h2>Goals</h2>
+        <ul>
+          <li>Become a professional video editor</li>
+          <li>Buy my dream car</li>
+          <li>Grow our startup into a successful creative business</li>
+        </ul>
+      </section>
+
+      <section class="card" id="contact">
+        <h2>Contact</h2>
+        <p><strong>Phone:</strong> 9847021670</p>
+        <p><strong>Email:</strong> <a href="mailto:muhammedfarrasak@gmail.com">muhammedfarrasak@gmail.com</a></p>
+        <p><strong>Instagram:</strong> <a href="https://instagram.com/farras.ak" target="_blank">@farras.ak</a></p>
+      </section>
+
+    </div>
+  </main>
+
+  <footer>
+    &copy; 2025 Muhammed Farras A.K. All rights reserved.
+  </footer>
+
+  <script>
+    // Animate full cards on scroll
+    const cards = document.querySelectorAll(".card");
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.2 });
+
+    cards.forEach(card => observer.observe(card));
+
+    // Scroll Spy effect
+    const sections = document.querySelectorAll("section");
+    const navLinks = document.querySelectorAll("nav a");
+
+    const spyObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          navLinks.forEach(link => {
+            link.classList.remove("active");
+            if (link.getAttribute("href").substring(1) === entry.target.id) {
+              link.classList.add("active");
+            }
+          });
+        }
+      });
+    }, { threshold: 0.6 });
+
+    sections.forEach(section => spyObserver.observe(section));
+
+    // Vanish navbar fully when scrolling down
+    const navbar = document.getElementById("navbar");
+    let lastScroll = 0;
+
+    window.addEventListener("scroll", () => {
+      let currentScroll = window.scrollY;
+
+      if (currentScroll > lastScroll && currentScroll > 100) {
+        // scrolling down → hide navbar
+        navbar.style.opacity = "0";
+        navbar.style.pointerEvents = "none"; 
+      } else {
+        // scrolling up → show navbar
+        navbar.style.opacity = "1";
+        navbar.style.pointerEvents = "auto";
+      }
+
+      lastScroll = currentScroll;
+    });
+  </script>
+
+</body>
+</html>
